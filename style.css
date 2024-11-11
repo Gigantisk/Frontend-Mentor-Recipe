@@ -5,12 +5,13 @@
 body {
     margin: 0;
     background-color: hsl(30, 54%, 90%);
+    padding-bottom: 250px; /* a suppriemer */
 }
 p {
     margin: 0;
 }
 
-/* centrage du DIV avec margin left/right en auto */
+    /* centrage du DIV avec margin left/right en auto */
 .container {
     width: 670px;
     background-color: white;
@@ -20,7 +21,7 @@ p {
     margin-right: auto;
 }
 
-/* image dans container + text align pour etre centré */
+    /* image dans container + text align pour etre centré */
 .img-container {
     text-align: center;
 }
@@ -53,20 +54,22 @@ p {
     max-width: 575px;
     border-radius: 10px;
 }
+
 .recipe-prep {
    color: hsl(332, 51%, 32%);
    font-size: 22px;
-   font-weight: bold;   
+   font-weight: bold;
 }
 
 
-/* utilisation de li::marker pour changer couleur */
-li::marker {
+    /* utilisation de .prep-advice::marker pour changer 
+    couleur de la liste .prep-advice */
+.prep-advice::marker {
     color: hsl(332, 51%, 32%);
 }
 
-/* reset font weight 400, padding-left pour deplacer le texte 
-du point vers la droite */
+    /* reset font weight 400, padding-left pour deplacer le texte 
+    du point vers la droite */
 
 .prep-advice {
     font-size: 16px;
@@ -78,8 +81,46 @@ du point vers la droite */
     margin-top: 25px;
 }
 
-.title-ingredients {
+/* liste d'ingredients */
+.container-list-ingredients {
+    margin-left: 32px;
+    padding-bottom: 16px;
+}
+
+    /* mm chose que pour .prep-advice::marker */
+
+.ingredients::marker,
+    .list-inscription::marker {
     color: hsl(14, 45%, 36%);
-    margin-left: 35px;
+}
+
+.title-lists {
+    color: hsl(14, 45%, 36%);
     font-size: 32px;
+}
+
+.ingredients {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 30px;
+    line-height: 24px;
+    padding-left: 16px;
+}
+
+
+.container-instruction {
+    margin-left: 32px;
+    max-width: 575px;
+}
+
+
+.list-inscription {
+    margin-left: 30px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 16px;
+    list-style-type: decimal;
 }
