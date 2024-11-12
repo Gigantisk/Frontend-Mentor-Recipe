@@ -1,34 +1,52 @@
 :root {
     --16px: 1rem;
+    --22px: 1.375rem;
+    --32px: 2rem;
+    --575px: 35.9375rem;
+    --600px: 37.5rem;
+    --670px: 41.875rem;
 }
 
 body {
     margin: 0;
     background-color: hsl(30, 54%, 90%);
-    padding-bottom: 250px; /* a suppriemer */
-}
-p {
-    margin: 0;
+    padding-bottom: 100px;
 }
 
-    /* centrage du DIV avec margin left/right en auto */
+.hr-ligne {
+    background-color: rgb(212, 212, 212);
+    border-radius: 2px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--600px);
+    height: 3px;
+}
+
+    /* FR : centrage du DIV avec margin left/right en auto 
+    -- 
+        EN : DIV centered with margin left/right in AUTO */
+
 .container {
-    width: 670px;
+    width: var(--670px);
     background-color: white;
     border-radius: 15px;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 24px;
 }
 
-    /* image dans container + text align pour etre centré */
+    /* FR : image dans container + text align pour etre centré 
+    --
+    EN : image in container using text-align */
 .img-container {
     text-align: center;
 }
 
 .img-omelette {
-    max-width: 600px;
-    margin-top: 20px;
+    max-width: var(--600px);
+    margin-top: 32px;
     border-radius: 10px;
 }
 
@@ -37,11 +55,11 @@ p {
 }
 
 .recipe-description {
-    font-size: 16px;
+    font-size: var(--16px);
     line-height: 24px;
     margin-left: 35px;
     margin-bottom: 35px;
-    max-width: 600px;
+    max-width: var(--600px);
 }
 
 .container-recipe-prep {
@@ -51,28 +69,35 @@ p {
     padding-top: 25px;
     padding-left: 25px;
     padding-bottom: 25px;
-    max-width: 575px;
+    max-width: var(--575px);
     border-radius: 10px;
 }
 
 .recipe-prep {
    color: hsl(332, 51%, 32%);
-   font-size: 22px;
+   font-size: var(--22px);
    font-weight: bold;
 }
 
 
-    /* utilisation de .prep-advice::marker pour changer 
-    couleur de la liste .prep-advice */
+    /* FR : utilisation de .prep-advice::marker pour changer 
+    couleur de la liste .prep-advice 
+    --
+    EN : .prep-advice::marker to change the color of the point 
+    of the list ".prep-adice*/
+
 .prep-advice::marker {
     color: hsl(332, 51%, 32%);
 }
 
-    /* reset font weight 400, padding-left pour deplacer le texte 
-    du point vers la droite */
+    /* FR : reset font weight 400, padding-left pour deplacer le texte 
+    du point vers la droite 
+    --
+    EN : reset font weight to 400, use of padding-left to 
+    move text to the right*/
 
 .prep-advice {
-    font-size: 16px;
+    font-size: var(--16px);
     font-weight: 400;
     color: black;
     line-height: 10px;
@@ -81,13 +106,15 @@ p {
     margin-top: 25px;
 }
 
-/* liste d'ingredients */
+/* liste d'ingredients (note for my self)*/
 .container-list-ingredients {
     margin-left: 32px;
     padding-bottom: 16px;
 }
 
-    /* mm chose que pour .prep-advice::marker */
+    /* FR :mm chose que pour .prep-advice::marker 
+    -- 
+    EN : same as .prep-advice::marker */
 
 .ingredients::marker,
     .list-inscription::marker {
@@ -96,12 +123,12 @@ p {
 
 .title-lists {
     color: hsl(14, 45%, 36%);
-    font-size: 32px;
+    font-size: var(--32px);
 }
 
 .ingredients {
     color: black;
-    font-size: 16px;
+    font-size: var(--16px);
     font-weight: 400;
     margin-left: 30px;
     line-height: 24px;
@@ -111,7 +138,7 @@ p {
 
 .container-instruction {
     margin-left: 32px;
-    max-width: 575px;
+    max-width: var(--575px);
 }
 
 
@@ -119,8 +146,57 @@ p {
     margin-left: 30px;
     margin-bottom: 16px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--16px);
     line-height: 20px;
     padding-left: 16px;
     list-style-type: decimal;
+}
+
+.nutrition-container {
+    margin-left: 32px;
+}
+
+
+.nutr-info-table {
+    font-size: var(--16px);
+    max-width: var(--600px);
+    margin-bottom: 8px;
+}
+
+/* table */
+
+table {
+    margin-left: 32px;
+    width: var(--600px);
+    border-collapse: collapse;
+    padding-top: 26px;
+    padding-bottom: 32px;
+}
+
+.td-left-line {
+    width: 50%;
+    padding-left: 32px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.td-right-line {
+    width: 50%;
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+tr { 
+    border: 3px;
+    border-color: rgb(212, 212, 212);
+    border-radius: 2px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+tr:last-child {
+    border: none;
 }
