@@ -1,64 +1,80 @@
 :root {
-    --16px: 1rem;
-    --22px: 1.375rem;
-    --32px: 2rem;
-    --575px: 35.9375rem;
-    --600px: 37.5rem;
-    --670px: 41.875rem;
+    --font-size-16px: 1rem;
+    --font-size-22px: 1.375rem;
+    --font-size-32px: 2rem;
+    --container-size-575px: 35.9375rem;
+    --container-size-600px: 37.5rem;
+    --container-size-670px: 41.875rem;
+}
+    /* reset body position */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+    /* FR :body en flex + justify content pour centrer .container 
+    -- 
+    EN : body in flex + justify content to center .container */
+
 body {
-    margin: 0;
     background-color: hsl(30, 54%, 90%);
     padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
+
+.young-serif-regular {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
 
 .hr-ligne {
     background-color: hsl(30, 18%, 87%);
     border-radius: 2px;
     border: none;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--600px);
+    margin: 10px auto 16px auto;
+    max-width: var(--container-size-600px);
     height: 3px;
 }
 
-    /* FR : centrage du DIV avec margin left/right en auto 
-    -- 
-        EN : DIV centered with margin left/right in AUTO */
-
 .container {
-    width: var(--670px);
+    width: var(--container-size-670px);
     background-color: white;
     border-radius: 15px;
     margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 24px;
+    padding: 24px;
 }
 
     /* FR : image dans container + text align pour etre centré 
     --
     EN : image in container using text-align */
+
 .img-container {
     text-align: center;
 }
 
 .img-omelette {
-    max-width: var(--600px);
-    margin-top: 32px;
+    max-width: var(--container-size-600px);
     border-radius: 10px;
 }
 
 .recipe-title {
-    margin-left: 35px;
+    margin-top: 20px;
+    margin-left: 8px;
 }
 
 .recipe-description {
-    font-size: var(--16px);
+    font-size: var(--font-size-16px);
     line-height: 24px;
-    margin-left: 35px;
-    margin-bottom: 35px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 24px;
     max-width: var(--600px);
 }
 
@@ -66,10 +82,9 @@ body {
     background-color: hsl(330, 100%, 98%);
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--600px);
+    max-width: var(--container-size-600px);
     border-radius: 10px;
-    padding-bottom: 2px;
-    padding-top: 2px;
+    padding: 12px 0 12px 12px;
 }
 
 .recipe-prep::marker {
@@ -78,9 +93,10 @@ body {
 
 .prep-title {
     color: hsl(332, 51%, 32%);
-    font-size: var(--22px);
+    font-size: var(--font-size-22px);
     font-weight: bold;
-    margin-left: 40px;
+    margin-left: 4px;
+    margin-bottom: 8px;
 }
 
     /* FR : utilisation de .prep-advice::marker pour changer 
@@ -98,16 +114,17 @@ body {
     EN : use of padding-left to move text to the right*/
 
 .prep-advice {
-    font-size: var(--16px);
+    font-size: var(--font-size-16px);
     color: black;
-    line-height: 36px;
+    line-height: 30px;
     padding-left: 10px;
     margin-left: 25px;
 }
 
 /* liste d'ingredients (note for my self)*/
 .container-list-ingredients {
-    margin-left: 16px;
+    margin-top: 16px;
+    margin-left: 8px;
     padding-bottom: 14px;
 }
 
@@ -121,24 +138,23 @@ body {
 
 .title-lists {
     color: hsl(14, 45%, 36%);
-    margin-left: 16px;
-    font-size: var(--32px);
+    font-size: var(--font-size-32px);
+    margin-bottom: 12px;
 }
 
 .ingredients {
     color: black;
     font-size: var(--16px);
     font-weight: 400;
-    margin-left: 0;
     line-height: 24px;
+    margin-left: 14px;
     padding-left: 16px;
 }
 
 
 .container-instruction {
-    margin-left: 16px;
-    padding-bottom: 14px;
-    max-width: var(--575px);
+    margin-left: 8px;
+    max-width: var(--container-size-575px);
 }
 
 .list-inscription::marker {
@@ -148,29 +164,29 @@ body {
 
 .list-inscription {
     margin-bottom: 16px;
-    font-size: var(--16px);
+    margin-left: 16px;
+    font-size: var(--font-size-16px);
     line-height: 20px;
     padding-left: 16px;
     list-style-type: decimal;
 }
 
 .nutrition-container {
-    margin-left: 16px;
+    margin-left: 8px;
 }
 
 
 .nutr-info-table {
-    font-size: var(--16px);
-    max-width: var(--600px);
+    font-size: var(--font-size-16px);
+    max-width: var(--container-size-600px);
     margin-bottom: 8px;
-    margin-left: 16px;
 }
 
 /* table */
 
 table {
-    margin-left: 32px;
-    width: var(--600px);
+    margin-left: 8px;
+    width: var(--container-size-600px);
     border-collapse: collapse;
     padding-top: 26px;
     padding-bottom: 32px;
