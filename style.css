@@ -107,15 +107,14 @@ body {
 /* liste d'ingredients (note for my self)*/
 .container-list-ingredients {
     margin-left: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
 }
 
     /* FR :mm chose que pour .prep-advice::marker 
     -- 
     EN : same as .prep-advice::marker */
 
-.ingredients::marker,
-    .list-inscription::marker {
+.ingredients::marker {
     color: hsl(14, 45%, 36%);
 }
 
@@ -137,9 +136,14 @@ body {
 
 .container-instruction {
     margin-left: 16px;
+    padding-bottom: 14px;
     max-width: var(--575px);
 }
 
+.list-inscription::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
 
 .list-inscription {
     margin-bottom: 16px;
