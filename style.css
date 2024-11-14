@@ -6,6 +6,20 @@
     --container-size-600px: 37.5rem;
     --container-size-670px: 41.875rem;
 }
+
+
+        /* FR : utilisation marge gauche et droite pour laisser apparaitre le fond
+    --
+    EN : use of margin left and right to let body appear when resize */
+
+@media (max-width: 768px) {
+    .container {
+       margin-left: 24px;
+       margin-right: 24px;
+    }
+}
+
+
     /* reset body position */
 
 * {
@@ -14,7 +28,7 @@
     box-sizing: border-box;
 }
 
-    /* FR :body en flex + justify content pour centrer .container 
+    /* FR : body en flex + justify content pour centrer .container 
     -- 
     EN : body in flex + justify content to center .container */
 
@@ -25,13 +39,6 @@ body {
     justify-content: center;
 }
 
-@media (max-width: 768px) {
-    .container {
-       width: 550px;
-       margin-left: 24px;
-       margin-right: 24px;
-    }
-}
 
 .young-serif-regular {
     font-family: "Young Serif", serif;
@@ -58,9 +65,8 @@ body {
     padding: 24px;
 }
 
-    /* FR : image dans container + text align pour etre centré 
-    --
-    EN : image in container using text-align */
+
+/* image */
 
 .img-container {
     max-width: var(--container-size-600px);
@@ -71,6 +77,9 @@ body {
     width: 100%;
     border-radius: 10px;
 }
+
+
+/* title + description */
 
 .recipe-title {
     margin-top: 20px;
@@ -85,6 +94,9 @@ body {
     margin-bottom: 24px;
     max-width: var(--600px);
 }
+
+
+/* recette */ 
 
 .container-recipe-prep {
     background-color: hsl(330, 100%, 98%);
@@ -129,7 +141,9 @@ body {
     margin-left: 25px;
 }
 
-/* liste d'ingredients (note for my self)*/
+
+/* liste d'ingredients */
+
 .container-list-ingredients {
     margin-top: 16px;
     margin-left: 8px;
@@ -160,6 +174,8 @@ body {
 }
 
 
+/* instructions */
+
 .container-instruction {
     margin-left: 8px;
     max-width: var(--container-size-575px);
@@ -178,6 +194,9 @@ body {
     padding-left: 16px;
     list-style-type: decimal;
 }
+
+
+/* nutrition part */
 
 .nutrition-container {
     margin-left: 8px;
