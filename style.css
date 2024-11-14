@@ -25,12 +25,19 @@ body {
     justify-content: center;
 }
 
+@media (max-width: 700px) {
+    .container {
+       width: 500px;
+    }
+
+
+}
+
 .young-serif-regular {
     font-family: "Young Serif", serif;
     font-weight: 400;
     font-style: normal;
 }
-
 
 
 
@@ -44,7 +51,7 @@ body {
 }
 
 .container {
-    width: var(--container-size-670px);
+    max-width: var(--container-size-670px);
     background-color: white;
     border-radius: 15px;
     margin-top: 60px;
@@ -56,10 +63,13 @@ body {
     EN : image in container using text-align */
 
 .img-container {
+    display: flex;
+    object-fit: cover;
     text-align: center;
 }
 
 .img-omelette {
+    display: block;
     max-width: var(--container-size-600px);
     border-radius: 10px;
 }
@@ -186,21 +196,21 @@ body {
 
 table {
     margin-left: 8px;
-    width: var(--container-size-600px);
+    max-width: var(--container-size-600px);
     border-collapse: collapse;
     padding-top: 26px;
     padding-bottom: 32px;
 }
 
 .td-left-line {
-    width: 50%;
+    width: 300px;
     padding-left: 32px;
     padding-bottom: 8px;
     padding-top: 8px;
 }
 
 .td-right-line {
-    width: 50%;
+    width: 300px;
     color: hsl(14, 45%, 36%);
     font-weight: bold;
     padding-bottom: 8px;
